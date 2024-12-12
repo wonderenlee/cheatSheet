@@ -1,0 +1,14 @@
+h1, h2 {
+    color: darkblue;
+  }
+  
+  table {
+      border: 2px solid purple;
+      width: 650px;
+      margin: 0 auto;
+  }
+  
+  .code {
+      font-family: monospace;
+      background-color: beige;
+  }
