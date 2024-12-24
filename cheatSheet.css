@@ -1,14 +1,33 @@
-h1, h2 {
-    color: darkblue;
-  }
-  
-  table {
-      border: 2px solid purple;
-      width: 650px;
-      margin: 0 auto;
-  }
-  
-  .code {
-      font-family: monospace;
-      background-color: beige;
-  }
+body {
+    background: lightgray;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+th {
+    border: 2px solid gray;
+}
+
+table {
+    margin: 20px auto;
+    border: 2px solid purple;
+    padding: 5px;
+}
+
+td {
+    border: 2px solid gray;
+    padding: 10px;
+}
+
+.tag,
+.name {
+    text-align: center;
+}
+
+.tag {
+    font-family: monospace;
+}
