@@ -12,7 +12,7 @@
             <h1>Front-End Dev Cheat Sheet</h1>
         </header>
 
-        <!-- HTML Section -->
+        <!-- Fundamentals HTML Section -->
         <table>
             <!-- table header -->
             <thead>
@@ -187,13 +187,84 @@
             <tfoot></tfoot>
         </table>
 
-        <!-- CSS Section -->
+        <!-- Fundaments CSS Section -->
         <table>
             <!-- table header -->
             <thead>
                 <tr>
                     <th colspan="4">
-                        <h2><a href="https://www.codecademy.com/learn/learn-css/modules/syntax-and-selectors/cheatsheet">CSS: Syntax and Selectors</></h2>
+                        <h2>CSS Anatomy</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="css-anatomy">
+                        <img src="images/CSS_Anatomy-nobgfill.svg" alt="CSS Anatomy" class="css_anatomy"/>
+                    </th>
+                </tr>
+                <tr> 
+                    <th colspan="1">
+                        <h3>Ruleset</h3>
+                    </th>
+                    <th colspan="1">
+                        <h3>Inline Style</h3>
+                    </th>
+                </tr>
+            </thead>
+
+            <!-- table body -->
+            <tbody>
+
+                <tr>
+                    <td class="ruleset">
+                        <ul>
+                            <li>Selector - The beginning of the ruleset used to target the element that will be styled</li>
+                            <li>Declaration Block - The code in-between (and including) the curly braces { } that contains the CSS declaration(s)</li>
+                            <li>Declaration - The group name for a property and value pair that applies a style to the selected element</li>
+                            <li>Property - The first part of the declaration that signifies what visual characteristic of the element should be modified</li>
+                            <li>Value - The second part of the declaration that signifies the value of the property</li>
+                        </ul>
+                    </td>
+                    <td class="inline">
+                        <ul>
+                            <li>Opening Tag - The start of an HTML element. This is the element that will be styled</li>
+                            <li>Attribute - The style attribute is used to add CSS inline syltes to an HTML element</li>
+                            <li>Declaration - The group name for a property and value pair that applies a style to the selected element</li>
+                            <li>Property - The first part of the declaration that signifies what visual characteristic of the element is to be modified</li>
+                            <li>Value - The second part of the declaration that signifies the value of the property</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                     <td class="stylesheet">
+                        <ul> Linking CSS File
+                            <li>href - like the anchor element, the value of this attribute must be the address, or path, to the CSS file</li>
+                            <li>rel - this attribute describes the relationship between the HTML file and the CSS file. Because you are liking to a stylesheet, the value should be set to stylesheet.</li>                   
+                            <p>The element will look like: <code>%lt;<link href='https://www.codecademy.com/stylesheets/style.css' rel='stylesheet'&gt;> . </code>
+                                <!-- TODO ADD Code -->
+                        </ul>
+                    </td>
+                    <td class="resource">
+                        <ul> Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css">Codeacademy Docs: CSS</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Docs: CSS</a></li>
+                            <li><a href="https://www.codecademy.com/workspaces/new">Codeacademy Workspaces</a></li>
+                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/font">Font</a></li>
+                            <li><a href="https://www.codecademy.com/resources/docs/css/colors">Colors</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- table footer -->
+            <tfoot></tfoot>
+        </table>
+
+        <table>
+            <!-- table header -->
+            <thead>
+                <tr>
+                    <th colspan="4">
+                        <h2><a href="https://www.codecademy.com/learn/learn-css/modules/syntax-and-selectors/cheatsheet">CSS: Syntax and Selectors </></h2>
                     </th>
                 </tr>
                 <tr>
@@ -216,15 +287,182 @@
             <tbody>
                 <tr>
                     <td class="tag">
-                        <pre><code></code></pre>
+                        <pre><code>N/A</code></pre>
                     </td>
                     <td class="name">Class and ID Selectors</td>
                     <td class="description">
-                        CSS classes can be reusable and applied to many elements. Class selectors are denoted with a period . followed by the class name. CSS ID selectors should be unique and used to style only a single element. ID selectors are denoted with a hash sign # followed by the id name.                    </td>
-                    <td class="example">[INSERT EXAMPLE]</td>
+                        CSS classes can be reusable and applied to many elements. Class selectors are denoted with a period . followed by the class name. CSS ID selectors should be unique and used to style only a single element. ID selectors are denoted with a hash sign # followed by the id name.                    
+                        <ul>Some important notes on the type selector:
+                            <br>
+                            <li>The type selector does not include the angle brackets.</li>
+                            <li>Since element types are often referred to by their opening tag name, the type selector is sometimes referred to as the tag name or element selector.</li></ul>
+                        </td>
+                    <td class="example">A page with two headlines. One headline needs to be bold and blue, and the other needs to be bold and green. Instead of writing separate CSS rules for each headline that repeat each other’s code, it’s better to write a .bold CSS rule, a .green CSS rule, and a .blue CSS rule. Then you can give one headline the bold green classes, and the other the bold blue classes</td>
                 </tr>
-            </tbody>
 
+                <tr>
+                    <td class="tag">
+                        <pre><code>.</code></pre>
+                    </td>
+                    <td class="name">Type</td>
+                    <td class="description">
+                        A selector is used to target the specific HTML element(s) to be styled by the declaration. One selector you may already be familiar with is the type selector. Just like its name suggests, the type selector matches the type of the element in the HTML document.                    </td>
+                    <td class="example"> p { color: green;}</td>
+
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>*</code></pre>
+                    </td>
+                    <td class="name">Universal</td>
+                    <td class="description">The universal selector selects all elements of any type.Targeting all of the elements on the page has a few specific use cases, such as resetting default browser styling or selecting all children of a parent element. </td>
+                    <td class="example">* { font-family: Verdana;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>class="brand"</code></pre>
+                    </td>
+                    <td class="name">Class</td>
+                    <td class="description"> A class attribute is one of the most common ways to select an HTML element by type, class, ID, and attribute. To select an HTML element by its class using CSS, a period (.) must be prepended to the class’s name. CSS classes can be reused over many elements</td>
+                    <td class="example">.brand { }</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code></code></pre>
+                    </td>
+                    <td class="name">Multiple Classes</td>
+                    <td class="description">We can add multiple classes to an HTML element’s class attribute by separating them with a space. This enables us to mix and match CSS classes to create many unique styles without writing a custom class for every style combination needed.</td>
+                    <td class="example">
+                        <ul>
+                            <li>Before: .green { color: green;} .bold { font-weight: bold;} </li>
+                            <li>After: < h1 class="green bold">... < /h1></li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>id="large-title</code></pre>
+                    </td>
+                    <td class="name">ID</td>
+                    <td class="description">In contrast to class which accepts multiple values, and can be used broadly throughout an HTML document, an element’s id can only have a single value, and only be used once per page. To select an element’s ID with CSS, we prepend the id name with a number sign (#). </td>
+                    <td class="example">                            
+                        <li>In HTML:  < h1 id="large-title"> ... < /h1></li>
+                        <li>In CSS: #large-title { }</li></td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>N/A</code></pre>
+                    </td>
+                    <td class="name">Attribute</td>
+                    <td class="description"> In HTML elements, attributes are used to add extra detail or functionality to the element (e.g., href, src, class, id).  The atribute selector can be used to target HTML elements that already contain attributes. Element of the same type can be targeted differently by their attribute or attribute value. This reduces the need to add new code such as the class and id attributes.
+                        <ul>
+                            <li>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">HTML Attribute Reference</a>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="example">
+                        <ul>
+                            <li>
+                                Example: [href]{ color: magenta;}
+                            </li>
+                            <li>
+                                Example 2: In HTML: < type attribute=".../value" > whereas in CSS type[attribute*="value"]{ }
+
+                            </li>
+
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>a:class</code></pre>
+                    </td>
+                    <td class="name">Pseudo-class</td>
+                    <td class="description">Provides all elements a different state when applied for user interaction, site navigation, and position in a document tree.</td>
+                    <td class="example">
+                        <ul>
+                            <li>:focus</li>
+                            <li>:visited</li>
+                            <li>:disabled</li>
+                            <li>:active</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>N/A</code></pre>
+                    </td>
+                    <td class="name">Specificity</td>
+                    <td class="description">The order by which the browser decides which CSS styles will be displayed. A best practice in CSS is to style elements while using the lowest degree of specificity so that if an element needs a new style, it is easy to override. IDs are the most specific selector in CSS, followed by classes, and finally, type. </td>
+                    <td class="example">
+                        <ul>
+                            <li>Specificity degree from lowest to highest: Type > Class > ID</li>
+                            <li>Example: < h1 class="green-class"> id="green-id"... < /h1></li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>element.class</element></code></pre>
+                    </td>
+                    <td class="name">Chaining</td>
+                    <td class="description">Combining multiple selectors to target a more specific element. This is useful when you want to style a specific element that has multiple classes or is a child of a specific element. </td>
+                    <td class="example">h1.special { } </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>.class element</code></pre>
+                    </td>
+                    <td class="name">Descendant Combinator</td>
+                    <td class="description">Elements that are nested within other HTML elements</td>
+                    <td class="example">.description h5 { color: blueviolet }</td>
+
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>element1 element2 { }</code></pre>
+                    </td>
+                    <td class="name">Chaining and Specificity</td>
+                    <td class="description">Adding more than one tag, class, or ID to a CSS selector increases the specificity of the CSS selector</td>
+                    <td class="example">.main p { color: red;}</td>
+
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>N/A</code></pre>
+                    </td>
+                    <td class="name">Multiple Selectors</td>
+                    <td class="description">In CSS, to avoid redundant code of multiple CSS selectors all at once it can be refactored </td>
+                    <td class="example">
+                        <ul>
+                            <li>Before: h1 { font-family: Georgia;} .menu { font-family: Georgia}</li>
+                            <li>After: h1, .menu { font-family: Georgia}</li>
+                        </ul>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>Notes:
+                        <li>Nested elements can be selected by separating selectors with a space.
+                        <li>Multiple unrelated selectors can receive the same styles by separating the selector names with commas. </li>
+                    </td>
+                </tr>
+
+
+            </tbody>
             <!-- table footer -->
             <tfoot></tfoot>
         </table>
@@ -256,14 +494,134 @@
             <!-- table body -->
             <tbody>
                 <tr>
+                    <tr>
+                        <td class="tag">
+                            <pre><code>font-familiy: fontName, fontNameBackup;</code></pre>
+                        </td>
+                        <td class="name">Font-Family</td>
+                        <td class="description">Font refers to the technical term typeface, or font family
+                            <ul>
+                                When setting typefaces on a web page, keep the following points in mind:
+                                <li>The font specified must be installed on the user’s computer or downloaded with the site.</li>
+                                <li>Web safe fonts are a group of fonts supported across most browsers and operating systems.</li>
+                                <li>Unless you are using web safe fonts, the font you choose may not appear the same between all browsers and operating systems.</li>
+                                <li>When the name of a typeface consists of more than one word, it’s a best practice to enclose the typeface’s name in quotes, like so: font-famiy: "Times Roman"</li>
+                            </ul>
+                            <ul>Resources
+                                <li><a href="https://www.codecademy.com/resources/docs/css/typography/font-family">font-family</a></li>
+                            </ul>
+                        </td>
+                        <td class="example">h1 { font-family: "Courier New", Garamond}</td>
+                    </tr>
+
+                <tr>
                     <td class="tag">
-                        <pre><code></code></pre>
+                        <pre><code>font-size: #;</code></pre>
                     </td>
-                    <td class="name">CSS: CSS declarations</td>
-                    <td class="description">
-                        In CSS, a declaration is the key-value pair of a CSS property and its value. CSS declarations are used to set style properties and construct rules to apply to individual or groups of elements. The property name and value are separated by a colon, and the entire declaration must be terminated by a semi-colon.                    </td>
-                    <td class="example">[INSERT EXAMPLE]</td>
+                    <td class="name">Font Size</td>
+                    <td class="description">Another way to change the typeface is by changing the size of text. Absolute lengths can be the following: px, in, mm, cm, pt, pc. Realtive lengths care be the following: %, em, rem, ch, ex, vh, vw, vmax, vmin.
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/font-size">font-size</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">p { font-size: 18px}</td>
                 </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>font-weight: weightType;</code></pre>
+                    </td>
+                    <td class="name">Font Weight</td>
+                    <td class="description">This property can control how bold or thin the text is within the typeface. The font-style-value can be the following: normal, bold, bolder, initial, inherit, lighter, or can be in the form of numerical values from 100 to 900. The default value is normal while the default numerical value is 400.
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/font-weight">font-weight</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">p { font-weight: bold;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>text-align: direction;</code></pre>
+                    </td>
+                    <td class="name">Text Align</td>
+                    <td class="description">Text default appears on the left side of the container in which it resides. The text-align property will align text to the element that holds it, otherwise known as its parent.
+                        <ul>
+                            The text-align property can be set to one of the following commonly used values:
+                            <li>left - aligns text to the left side of the parent element</li>
+                            <li>right - aligns text to the right side of the parent element</li>
+                            <li>center - aligns text to the center of the parent element</li>
+                            <li>justify - aligns text to both the left and right sides of the parent element</li>
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/text-align">text-align</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">h1 { text-align: right;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ color: color; background-color: color;}</code></pre>
+                    </td>
+                    <td class="name">Color and Background Color</td>
+                    <td class="description">There are 2 distinctions about Color
+                        <ul>
+                            <li>Foreground Color - The color that an element appears in. In CSS, this property style is called color. </li>
+                            <li>Background Color - This property styles an element's background color. </li>                       
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/colors/color">color</a></li>
+                            <li><a href="https://www.codecademy.com/resources/docs/css/background/background-color">background-color</a></li>
+
+                        </ul>
+                    </td>
+                    <td class="example">h1 { color: red; background-color: blue;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ opacity: #;}</code></pre>
+                    </td>
+                    <td class="name">Opacity</td>
+                    <td class="description">The measure of how transparent an element is. It’s measured from 0 to 1, with 1 representing 100%, or fully visible and opaque, and 0 representing 0%, or fully invisible.
+                        Opacity can be used to make elements fade into others for a nice overlay effect.
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/colors/opacity">opacity</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">.overlay { opacity: 0.5;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ background-image: url(" ");}</code></pre>
+                    </td>
+                    <td class="name">Background Image</td>
+                    <td class="description">The option of making the background an element as image.
+                        <ul>Resources
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">Relative File Path</a></li>
+                            <li><a href="https://www.codecademy.com/resources/docs/css/position/relative">Relative</a></li>
+                            <li><a href="https://www.codecademy.com/resources/docs/css/background/background-image">background-image</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">
+                        <ul>
+                            <li>.main-banner { background-image: url("https://www.example.com/image.jpg");}</li>
+                            <li>.main-banner { background-image: url("images/mountain.jpg");}</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>!important</code></pre>
+                    </td>
+                    <td class="name">Important</td>
+                    <td class="description">A CSS rule used to give a style declaration the highest  priority. It overrides any other conflicting styles, regardless of specificity.</td>
+                    <td class="example">p { color: blue !important;}</td>
+                </tr>
+
             </tbody>
 
             <!-- table footer -->
@@ -276,6 +634,22 @@
                 <tr>
                     <th colspan="4">
                         <h2><a href="https://www.codecademy.com/learn/learn-css/modules/learn-css-box-model/cheatsheet">CSS: The Box Model</a></h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4">
+                        <img src="/images/diagram-boxmodel.svg" alt="Box Model" class="box-model"/>
+                </tr>
+                <tr>
+                    <th colspan="4">
+                        <h7>The box model comprises the set of properties that define the parts of an element that takes up space on a web page.
+                            The properties includes:
+                            <ol>
+                                <li>width and height: the width and height of the content area</li>
+                                <li>padding: the amount of space between the content area and the border</li>
+                                <li>border: the thickness and style of the border surrounding the content area and padding</li>
+                            </ol>
+                        </h7>
                     </th>
                 </tr>
                 <tr>
@@ -292,19 +666,216 @@
                         <h3>Example</h3>
                     </th>
                 </tr>
+
             </thead>
 
             <!-- table body -->
             <tbody>
                 <tr>
                     <td class="tag">
-                        <pre><code></code></pre>
+                        <pre><code>{ height: #; weight #;}</code></pre>
                     </td>
-                    <td class="name"></td>
-                    <td class="description">
+                    <td class="name">Height and Width</td>
+                    <td class="description">An element’s content has two dimensions: a height and a 
+                        Preview: Docs Loading link description
+                        width
+                        . By default, the dimensions of an HTML box are set to hold the raw contents of the box.
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/sizing/width">width</a></li>
+                        </ul>
+                    
                     </td>
-                    <td class="example"></td>
+                    <td class="example">p { height: 80px; width: 240px;}</td>
                 </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ border: # style color;}</code></pre>
+                    </td>
+                    <td class="name">Borders</td>
+                    <td class="description">A border is a line that surrounds an element, like a frame around painting. Borders can be set with a specific width, style, and color.                       
+                        <ul>
+                            <li>Width - The thickness of the border with types: thin, mediume, thick.</li>
+                            <li>Style - The design of the border with some types: none, dotted, dashed, solid</li>
+                            <li>Color - The color of the border</li>
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#values">border-style</a></li> 
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">color keywords</a></li>
+                            <li><a href="https://www.codecademy.com/resources/docs/css/borders">borders</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">p { border: 10px dotted red;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ border-radius: #;}</code></pre>
+                    </td>
+                    <td class="name">Border Radius</td>
+                    <td class="description">It highlights the true shape of an element's box: square: However, the corners of an element's border box can be modified such as a circle. Units: #, %.
+                    </td>
+                    <td class="example">div.container { border-radius: 10px;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ padding: #;}</code></pre>
+                    </td>
+                    <td class="name">Padding</td>
+                    <td class="description">The space between the contents of a box and the borders of a box like the space between a picture and frame surrounding it. Type of padding properties: padding-top, padding-right,padding-bottom, padding-left.
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/padding/padding">paddings</a></li>
+                        </ul>
+
+                    </td>
+                    <td class="example">p.content-heaader { padding-top: 5px; padding-bottom: 10px;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ padding: # # # #;}</code></pre>
+                    </td>
+                    <td class="name">Padding Shorthand</td>
+                    <td class="description">A declaration that uses multiple properties as values like the amount of padding on each side of the box with one line of code. Padding shorthand let's you specificy all the padding properties as values on a single line.
+                    </td>
+                    <td class="example">
+                        <ul>Multiple ways to write the shorthand property:
+                            <li>4 Values with top, right, bottom, left: p.content-header { padding: 5px 11px 4px 9px}</li>
+                            <li>3 Values with top, right/left, bottom: p.content-header { padding: 5px 10px 20px}</li>
+                            <li>2 Values top/bottom, right/left: p.content-header { padding: 5px 10px}</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ margin: # # # #;}</code></pre>
+                    </td>
+                    <td class="name">Margin</td>
+                    <td class="description">The space directly outside of the box and its used by specifiying the size of the space. Margin size around the box follows: margin-top, margin-right, margin-bottom, margin-left.
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/margins">margins</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">p { margin: 20px}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ margin: # # # #;}</code></pre>
+                    </td>
+                    <td class="name">Margin Shorthand</td>
+                    <td class="description">A declaration that uses multiple properties or margins as values in a single line.
+                    </td>
+                    <td class="example">
+                        <ul>Multiple ways to write the margin shorthand property:
+                            <li>4 Values with top, right, bottom, left: p.content-header { margin: 5px 11px 4px 9px}</li>
+                            <li>3 Values with top, right/left, bottom: p.content-header { margin: 5px 10px 20px}</li>
+                            <li>2 Values top/bottom, right/left: p.content-header { margin: 5px 10px}</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ margin: # auto;}</code></pre>
+                    </td>
+                    <td class="name">Margin Auto</td>
+                    <td class="description">The margin property let's you center content on the horizontal x-axis (right, left). In order to center an element, a width must be set for that element. Otherwise, the width of the div will be automatically set to the full width of its containing element, like the < body >. 
+                    </td>
+                    <td class="example">div.headline { margin: 0 auto;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>N/A</code></pre>
+                    </td>
+                    <td class="name">Margin Collapse</td>
+                    <td class="description">Padding is space added inside the border of an element while margin is space added outside the element's border. A key difference is the vertical margins (top and bottom margins) collapse while the to and bottom padding doesn't. Of the two vertical margins the larger one sets the distance between adjacent elements.
+                    </td>
+                    <td class="example">
+                        <ul>Vertical Margins Collapse
+                            <img src="/images/diagram-verticalmargins.svg" alt="Vertical Margins Collapse"/>
+                            <li>Before: p { margin-top: 10px; margin-bottom: 30px;}</li>
+                            <li>After: p { margin: 30px 0;}</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ min-width: #; max-width: #;}</code></pre>
+                    </td>
+                    <td class="name">Min and Max Height and Width</td>
+                    <td class="description">a web page can be viewed through displays of differing screen size, the content on the web page can suffer from those changes in size. To avoid this problem, CSS offers two properties that can limit how narrow or how wide an element’s box can be sized to:
+                        <ul>
+                            <li>min-width - this property ensures a minimum width of an element's box</li>
+                            <li>max-width - this property ensures a maximum width of an element's box</li>
+                        </ul>
+                    </td>
+                    <td class="example">The width of all paragraphs will not shrink below 300 pixels, nor will the width exceed 600 pixels.
+                        <ul>p { min-width: 300px; max-width: 600px;}</ul>
+                        </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ overflow: value;}</code></pre>
+                    </td>
+                    <td class="name">Overflow</td>
+                    <td class="description">
+                        <ul>Background: All components of the box model omprise an element’s size. For example, an image that has the following dimensions is 364 pixels wide and 244 pixels tall.
+                            <li>300 pixels wide</li>
+                            <li>200 pixels tall</li>
+                            <li>10 pixels padding on the left and right</li>
+                            <li>10 pixcels padding on the top and bottom</li>
+                            <li>2 pixels border on the left and right</li>
+                            <li>2 pixels porder on the top and bottom</li>
+                            <li>20 pixels margin on the left and right</li>
+                            <li>10 pixels margin on the top and bottom</li>
+                            The total dimensions (364px by 244px) are calculated by adding all of the vertical dimensions together and all of the horizontal dimensions together. Sometimes, these components result in an element that is larger than the parent’s containing area.
+                        </ul>
+                        <ul>The overflow property controls what happens to content that spills, or overflows, outside its box. The most commonly used values are:
+                            <li>hidden - when set to this value, any content that overflows will be hidden from view</li>
+                            <li>scroll - when set to this value, a scrollbar will be added to the element's box so that the rest of the content can be viewed by scrolling</li>
+                            <li>visible - when set to this value, the overflow content will be displayed outside of the containing element. Note: this is the default value</li>
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/overflow/overflow-x">overflow-x</a></li>
+                            <li><a href="https://www.codecademy.com/resources/docs/css/overflow/overflow-y">overflow-y</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">Doc</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">p { overflow: scroll}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>N/A</code></pre>
+                    </td>
+                    <td class="name">Restting Defaults</td>
+                    <td class="description">All major web browsers have a default stylesheet they use in the absence of an external stylesheet. These default stylesheets are known as user agent stylesheets. In this case, the term user agent is a tehnical term for the browser.
+                    </td>
+                    <td class="example">* { margin:0; padding: 0;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ visibility: value;}</code></pre>
+                    </td>
+                    <td class="name">Visibility</td>
+                    <td class="description">
+                        The visibility property in CSS determines whether an element is visible or hidden within the page. 
+                        <ul>Value Types:
+                            <li>hidden - hides an element</li>
+                            <li>visible - displays an element</li>
+                            <li>collapse - hides an element (table row or column)</li>
+                        </ul>
+                    </td>
+                    <td class="example">.future { visibility: hidden;}</td>
+                </tr>
+
             </tbody>
 
             <!-- table footer -->
@@ -339,9 +910,165 @@
             <tbody>
                 <tr>
                     <td class="tag">
+                        <pre><code>N/A</code></pre>
+                    </td>
+                    <td class="name">Flow of HTML</td>
+                    <td class="description">The flow of elements in HTML is when  a browser will render the elements of an HTML document that has no CSS from left to right, top to bottom, in the same order as they exist in the document. 
+                        <ul>5 properties for adjusting the position of HTML elements in the browser:
+                            <li>position</li>
+                            <li>display</li>
+                            <li>z-index</li>
+                            <li>float</li>
+                            <li>clear</li>
+                        </ul>
+                    </td>
+                    <td class="example">N/A
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ position: value}</code></pre>
+                    </td>
+                    <td class="name">Position</td>
+                    <td class="description">The default position of an element can be changed by setting its position property. The position property can take one of 5 values:
+                        <li>static - the default value it does not need to be specified</li>
+                        <li>relative</li>
+                        <li>absolute</li>
+                        <li>fixed</li>
+                        <li>sticky</li> 
+                    </td>
+                    <td class="example">.question { position: static;}
+                        <img src="/images/Position-updated.webp" alt="Flow of HTML"/>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ position: relative;}</code></pre>
+                    </td>
+                    <td class="name">Position: Relative</td>
+                    <td class="description">This value allows you to position an element relative to its default static position on the web page.
+                        <ul>The position declaration with one or more of the following offset properties that will move the element away from its default static position:
+                            <li>top - moves the element down from the top</li>
+                            <li>right - moves the element away from the right side (to the left)</li>
+                            <li>bottom - moves the element up from the bottom</li>
+                            <li>left - moves the element away from the left side (to the right)</li>
+                        </ul>
+                    </td>
+                    <td class="example">.green-box { background-color: green; position: relative; top:50px; left: 120px;}
+                        <img src="/images/Relative.webp" alt="Position Relative"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ position: absolute;}</code></pre>
+                    </td>
+                    <td class="name">Position: Absolute</td>
+                    <td class="description">When an element’s position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. The element will be positioned relative to its closest ancestor that has its position property set to anything other than static (e.g., relative, absolute, or 
+                        Preview: Docs Positions an element relative to the viewport, removing it from the document flow and keeping it fixed during page scrolling.
+                        fixed
+                        ), and offset properties can be used to adjust its final position from that reference point. Take a look at the image below:
+                        <img src="/images/position-absolute.png" alt="Position Absolute"/>                        
+                    </td>
+                    <td class="example">.progress { position: absolute; top: 300px; right: 0px;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ position: fixed;}</code></pre>
+                    </td>
+                    <td class="name">Position: Fixed</td>
+                    <td class="description">An element that remains to a specific position on the page (regardless of user scrolling) by setting its position to fixed, and accompanying it with the off properties: top, right, bottom, left.
+                    </td>
+                    <td class="example">. title { position: fixed; top: 0px; left: 0px;}
+                        <img src="/images/Fixed.gif" alt="Position Fixed"/>
+                    </td>
+                </tr> 
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ position: sticky;}</code></pre>
+                    </td>
+                    <td class="name">Position: Sticky</td>
+                    <td class="description">The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further along with the familiar offset properties: top, right, bottom, left.
+                    </td>
+                    <td class="example">
+                        <ul>.box-bottom { background-color: darkgreen; position: sticky; top: 240px}
+                            <img src="/images/Sticky.gif" alt="Position Sticky"/>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ z-index: integerValue;}</code></pre>
+                    </td>
+                    <td class="name">Z-Index</td>
+                    <td class="description">The z-index property controls how far back or how far forward an element should appear on the web page when elements overlap. This can be thought of as the depth of elements, with deeper elements appearing behind shallower elements. The z-index property accepts integer values.
+                    </td>
+                    <td class="example">.blue-box { background-color: blue; position: relative; z-index: 1; }
+                        <img src="/images/Z-index.webp" alt="Z-Index"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code> { display: inline;}</code></pre>
+                    </td>
+                    <td class="name">Display: Inline</td>
+                    <td class="description">The default display for some elements, such as < em>, < strong>, and < a>, is called inline. Inline elements have a box that wraps tightly around their content, only taking up the amount of space necessary to display their content and not requiring a new line after each element. The height and width of these elements cannot be specified in the CSS document.
+                        <ul>Resources
+                            <li>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">Doc: inline</a>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="example">h1 { display: inline;}</td>
+                </tr>
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ display: block;}</code></pre>
+                    </td>
+                    <td class="name">Display: Block</td>
+                    <td class="description">Block-level elements don't display elements in the same line as the content around them. These elements fill the entire width of the page by default and their width property can be set. Unless otherwise specified, they are the height necessary to accommodate their content.
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">MDN Doc: block</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">.footer { display: block; height: 120px;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ display: inline-block; width: #; height: #;}</code></pre>
+                    </td>
+                    <td class="name">Display: Inline-Block</td>
+                    <td class="description"> This property combines features of both inline and block elements. Inline-block elements can appear next to each other and we can specify their dimensions using the width and height properties
+                    </td>
+                    <td class="example">.rectangle { display: inline-block; width: 200px; height: 300px;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
                         <pre><code></code></pre>
                     </td>
-                    <td class="name"></td>
+                    <td class="name">Float</td>
+                    <td class="description">
+                    </td>
+                    <td class="example"></td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="tag">
+                        <pre><code></code></pre>
+                    </td>
+                    <td class="name">Clear</td>
                     <td class="description">
                     </td>
                     <td class="example"></td>
@@ -351,6 +1078,8 @@
             <!-- table footer -->
             <tfoot></tfoot>
         </table>
+
+        <!-- Advanced CSS Section -->
 
         <table>
             <!-- table header -->
