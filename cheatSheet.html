@@ -345,7 +345,7 @@
 
                 <tr>
                     <td class="tag">
-                        <pre><code>id="large-title</code></pre>
+                        <pre><code>id="large-title"</code></pre>
                     </td>
                     <td class="name">ID</td>
                     <td class="description">In contrast to class which accepts multiple values, and can be used broadly throughout an HTML document, an element’s id can only have a single value, and only be used once per page. To select an element’s ID with CSS, we prepend the id name with a number sign (#). </td>
@@ -493,92 +493,6 @@
 
             <!-- table body -->
             <tbody>
-                <tr>
-                    <tr>
-                        <td class="tag">
-                            <pre><code>font-familiy: fontName, fontNameBackup;</code></pre>
-                        </td>
-                        <td class="name">Font-Family</td>
-                        <td class="description">Font refers to the technical term typeface, or font family
-                            <ul>
-                                When setting typefaces on a web page, keep the following points in mind:
-                                <li>The font specified must be installed on the user’s computer or downloaded with the site.</li>
-                                <li>Web safe fonts are a group of fonts supported across most browsers and operating systems.</li>
-                                <li>Unless you are using web safe fonts, the font you choose may not appear the same between all browsers and operating systems.</li>
-                                <li>When the name of a typeface consists of more than one word, it’s a best practice to enclose the typeface’s name in quotes, like so: font-famiy: "Times Roman"</li>
-                            </ul>
-                            <ul>Resources
-                                <li><a href="https://www.codecademy.com/resources/docs/css/typography/font-family">font-family</a></li>
-                            </ul>
-                        </td>
-                        <td class="example">h1 { font-family: "Courier New", Garamond}</td>
-                    </tr>
-
-                <tr>
-                    <td class="tag">
-                        <pre><code>font-size: #;</code></pre>
-                    </td>
-                    <td class="name">Font Size</td>
-                    <td class="description">Another way to change the typeface is by changing the size of text. Absolute lengths can be the following: px, in, mm, cm, pt, pc. Realtive lengths care be the following: %, em, rem, ch, ex, vh, vw, vmax, vmin.
-                        <ul>Resources
-                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/font-size">font-size</a></li>
-                        </ul>
-                    </td>
-                    <td class="example">p { font-size: 18px}</td>
-                </tr>
-
-                <tr>
-                    <td class="tag">
-                        <pre><code>font-weight: weightType;</code></pre>
-                    </td>
-                    <td class="name">Font Weight</td>
-                    <td class="description">This property can control how bold or thin the text is within the typeface. The font-style-value can be the following: normal, bold, bolder, initial, inherit, lighter, or can be in the form of numerical values from 100 to 900. The default value is normal while the default numerical value is 400.
-                        <ul>Resources
-                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/font-weight">font-weight</a></li>
-                        </ul>
-                    </td>
-                    <td class="example">p { font-weight: bold;}</td>
-                </tr>
-
-                <tr>
-                    <td class="tag">
-                        <pre><code>text-align: direction;</code></pre>
-                    </td>
-                    <td class="name">Text Align</td>
-                    <td class="description">Text default appears on the left side of the container in which it resides. The text-align property will align text to the element that holds it, otherwise known as its parent.
-                        <ul>
-                            The text-align property can be set to one of the following commonly used values:
-                            <li>left - aligns text to the left side of the parent element</li>
-                            <li>right - aligns text to the right side of the parent element</li>
-                            <li>center - aligns text to the center of the parent element</li>
-                            <li>justify - aligns text to both the left and right sides of the parent element</li>
-                        </ul>
-                        <ul>Resources
-                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/text-align">text-align</a></li>
-                        </ul>
-                    </td>
-                    <td class="example">h1 { text-align: right;}</td>
-                </tr>
-
-                <tr>
-                    <td class="tag">
-                        <pre><code>{ color: color; background-color: color;}</code></pre>
-                    </td>
-                    <td class="name">Color and Background Color</td>
-                    <td class="description">There are 2 distinctions about Color
-                        <ul>
-                            <li>Foreground Color - The color that an element appears in. In CSS, this property style is called color. </li>
-                            <li>Background Color - This property styles an element's background color. </li>                       
-                        </ul>
-                        <ul>Resources
-                            <li><a href="https://www.codecademy.com/resources/docs/css/colors/color">color</a></li>
-                            <li><a href="https://www.codecademy.com/resources/docs/css/background/background-color">background-color</a></li>
-
-                        </ul>
-                    </td>
-                    <td class="example">h1 { color: red; background-color: blue;}</td>
-                </tr>
-
                 <tr>
                     <td class="tag">
                         <pre><code>{ opacity: #;}</code></pre>
@@ -937,6 +851,9 @@
                         <li>absolute</li>
                         <li>fixed</li>
                         <li>sticky</li> 
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/position/position">position</a></li>
+                        </ul>
                     </td>
                     <td class="example">.question { position: static;}
                         <img src="/images/Position-updated.webp" alt="Flow of HTML"/>
@@ -956,6 +873,9 @@
                             <li>bottom - moves the element up from the bottom</li>
                             <li>left - moves the element away from the left side (to the right)</li>
                         </ul>
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/position/relative">relative</a></li>
+                        </ul>
                     </td>
                     <td class="example">.green-box { background-color: green; position: relative; top:50px; left: 120px;}
                         <img src="/images/Relative.webp" alt="Position Relative"/>
@@ -971,7 +891,10 @@
                         Preview: Docs Positions an element relative to the viewport, removing it from the document flow and keeping it fixed during page scrolling.
                         fixed
                         ), and offset properties can be used to adjust its final position from that reference point. Take a look at the image below:
-                        <img src="/images/position-absolute.png" alt="Position Absolute"/>                        
+                        <img src="/images/position-absolute.png" alt="Position Absolute"/>   
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/position/absolute">absolute</a></li>
+                        </ul>                     
                     </td>
                     <td class="example">.progress { position: absolute; top: 300px; right: 0px;}</td>
                 </tr>
@@ -982,6 +905,9 @@
                     </td>
                     <td class="name">Position: Fixed</td>
                     <td class="description">An element that remains to a specific position on the page (regardless of user scrolling) by setting its position to fixed, and accompanying it with the off properties: top, right, bottom, left.
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/position/fixed">fixed</a></li>
+                        </ul>
                     </td>
                     <td class="example">. title { position: fixed; top: 0px; left: 0px;}
                         <img src="/images/Fixed.gif" alt="Position Fixed"/>
@@ -994,6 +920,9 @@
                     </td>
                     <td class="name">Position: Sticky</td>
                     <td class="description">The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further along with the familiar offset properties: top, right, bottom, left.
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/position/sticky">sticky</a></li>
+                        </ul>
                     </td>
                     <td class="example">
                         <ul>.box-bottom { background-color: darkgreen; position: sticky; top: 240px}
@@ -1008,6 +937,9 @@
                     </td>
                     <td class="name">Z-Index</td>
                     <td class="description">The z-index property controls how far back or how far forward an element should appear on the web page when elements overlap. This can be thought of as the depth of elements, with deeper elements appearing behind shallower elements. The z-index property accepts integer values.
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/position/z-index">z-index</a></li>
+                        </ul>
                     </td>
                     <td class="example">.blue-box { background-color: blue; position: relative; z-index: 1; }
                         <img src="/images/Z-index.webp" alt="Z-Index"/>
@@ -1024,6 +956,7 @@
                             <li>
                                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">Doc: inline</a>
                             </li>
+                            <li><a href="https://www.codecademy.com/resources/docs/css/display">display</a></li>
                         </ul>
                     </td>
                     <td class="example">h1 { display: inline;}</td>
@@ -1053,25 +986,44 @@
 
                 <tr>
                     <td class="tag">
-                        <pre><code></code></pre>
+                        <pre><code>{ float: value;}</code></pre>
                     </td>
                     <td class="name">Float</td>
-                    <td class="description">
+                    <td class="description"> The float property is commonly used for wrapping text around an image. Note:For layout purposes when moving elements left or right its better suited for tools: CSS grid and flexbox. However, if using float the element must have a defined width, otherwise, the element will assume the full width of its containing element.This property uses values:
+                        <ul>
+                            <li>left - moves, or floats, elements as far left as possible</li>
+                            <li>right - moves elements as far right as possible</li>
+                        </ul>
+
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/display/float">float</a></li>
+                        </ul>
                     </td>
-                    <td class="example"></td>
+                    <td class="example"> .green-section { width: 50%; height: 150px;} .orange-section {background-color: orange; width: 50%; float: right;}
+                        <ul> The .orange-section element floats to the right. 
+                            <img src="/images/Float.png" alt="CSS float">
+                        </ul>
+                    </td>
                 </tr>
-
-
-
 
                 <tr>
                     <td class="tag">
-                        <pre><code></code></pre>
+                        <pre><code>{ clear: value;}</code></pre>
                     </td>
                     <td class="name">Clear</td>
-                    <td class="description">
+                    <td class="description">The float property can float multiple elements at once; however, if the elements have different heights that affects their layout on the page. The clear property specifies how elements should behave when they bump into each other on the page. The values are:
+                        <ul>
+                            <li>left - the left side of the element will not touch any other element withi nthe same containing element</li>
+                            <li>right - the right side of the element will not touch any other element within the same containing element</li>
+                            <li>both - neither side of the element will touch any other element within the same containing element</li>
+                            <li>none - the element can touch either side</li>
+                        </ul>
                     </td>
-                    <td class="example"></td>
+                    <td class="example">div { width: 200px; float: left;} div.special { clear: left;} 
+                        <ul>
+                            All < divs>s on the page are floated to the left side.  The element with class special did not move all the way to the left because taller < div> blocked its posistioning. By seeting its clear property to left, the special < div> will be moved all the way to the left side of the page.</div></divs>
+                        </ul>
+                    </td>
                 </tr>
             </tbody>
 
@@ -1079,7 +1031,7 @@
             <tfoot></tfoot>
         </table>
 
-        <!-- Advanced CSS Section -->
+        <!-- Additional CSS Section -->
 
         <table>
             <!-- table header -->
@@ -1109,12 +1061,91 @@
             <tbody>
                 <tr>
                     <td class="tag">
-                        <pre><code></code></pre>
+                        <pre><code>{ color: colorName; background-color: colorName;}</code></pre>
                     </td>
-                    <td class="name"></td>
-                    <td class="description">
+                    <td class="name">Color and Background Color</td>
+                    <td class="description">There are 2 distinctions about Color. CSS has roughly 140 named colors.
+                        <ul>
+                            <li>Foreground Color - The color that an element appears in. In CSS, this property style is called color. </li>
+                            <li>Background Color - This property styles an element's background color. </li>                       
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/colors/color">color</a></li>
+                            <li><a href="https://www.codecademy.com/resources/docs/css/background/background-color">background-color</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">color names</a></li>
+                        </ul>
                     </td>
-                    <td class="example"></td>
+                    <td class="example">h1 { color: red; background-color: blueviolet;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ color: #FFFFFF;} or { color: #FFF;}</code></pre>
+                    </td>
+                    <td class="name">Hexadecimal</td>
+                    <td class="description">A hexadecimal is a syntax that can specify colors using hex colors. A hex color begins with a hash character (#) which is followed by three or six characters. The characters represent values for red, blue and green.  The hexadecimal number system has 16 digits (0-15) instead of 10 (0-9) like in the standard decimal system.
+                        <ul>Resources
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">hexadecimal colors</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">{ background-color: #9932CC;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ color: rgb(11, 22, 33);}</code></pre>
+                    </td>
+                    <td class="name">RGB</td>
+                    <td class="description">Another syntax for representing RGB values, commonly referred to as “RGB value” or just “RGB”, that uses decimal numbers.Each of the three values represents a color component, and each can have a decimal number value from 0 to 255. 
+                        <ul>
+                            <li>The first number represents the amount of red, the second is green, and the third is blue.</li>
+                        </ul> Note: The RGB color scheme is convenient because it’s very close to how computers represent colors internally.
+                    </td>
+                    <td class="example">h1 { color: rgb(23, 45, 23);}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code> { color: hsl(111, 0%, 100%;);}</code></pre>
+                    </td>
+                    <td class="name">Hue, Saturation, and Lightness (HSL)</td>
+                    <td class="description"> The syntax for HSl is similar to the decimal form of RGB. The first number represents the degree of the hue, and can be between 0 and 360. The second and third numbers are percentages representing saturation and lightness.
+                        <ul>
+                            <li>Hue - The first number. It refers to an angle on a color wheel. Red is 0 degrees, Green is 120 degrees, Blue is 240 degrees, and then back to Red at 360</li>
+                            <li>Saturation - The intensity or purity of the color. The saturation increases towards 100% as the color becomes richer. The saturation decreases towards 0% as the color becomes grayer</li>
+                            <li>Lightness - How light or dark the color is. Halfway, or 50%, is normal lightness. Imagine a sliding dimmer on a light switch that starts halfway. Sliding the dimmer up towards 100% makes the color lighter, closer to white. Sliding the dimmer down towards 0% makes the color darker, closer to black</li>
+                        </ul>
+                    </td>
+                    <td class="example">{ color: hsl(120, 60%, 70%;);}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>                        <ul>
+                            <li>For hexadecimal,{ color: #12312360;} or { color: #1236}</li>
+                            <li>For RGB, { color: rgba(11, 22, 33, 0.6);}</li>
+                            <li>For HSL,{ color: hsla(123, 0%, 100%, 0.6);}</li>
+                        </ul></code></pre>
+                    </td>
+                    <td class="name">Opacity and Alpha</td>
+                    <td class="description"> The amount of transparency or “the amount of the background to mix with the foreground” is represented as alpha. 
+                        <ul>
+                            <li>Hexadecimal: Alpha value is unique andunconventional. By adding a two-digit hexadecimal value to the end of the six-digit representation (#FF77AA50), or a one-digit hexadecimal value to the end of the three-digit representation (#F7A50), you can change the opacity of a hexadecimal color. Hex opacity ranges from 00 (transparent) to FF (opaque).
+                            </li>
+                            <li>RGB and HSL: Alpha is a decimal number from zero to one. If alpha is zero, the color will be completely transparent. If alpha is one, the color will be opaque. The value for half-transparent would be 0.5.
+                            </li>
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/colors/opacity">opacity</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">
+                        <ul>
+                            <li>For hexadecimal,{ color: #B3AB3A45;} or { color: #B3A45}</li>
+                            <li>For RGB, { color: rgba(234, 45, 98, 0.33);}</li>
+                            <li>For HSL,{ color: hsla(34, 100%, 50%, 0.1);}</li>
+                        </ul>
+                    </td>
                 </tr>
             </tbody>
 
@@ -1126,8 +1157,9 @@
             <!-- table header -->
             <thead>
                 <tr>
-                    <th colspan="4">
+                     <th colspan="4">
                         <h2><a href="https://www.codecademy.com/learn/learn-css/modules/learn-css-typography/cheatsheet">CSS: Typography</a></h2>
+                        <h7>The art of arranging text on page</h7>
                     </th>
                 </tr>
                 <tr>
@@ -1149,13 +1181,221 @@
             <!-- table body -->
             <tbody>
                 <tr>
+                    <tr>
+                        <td class="tag">
+                            <pre><code>font-familiy: PreferredFontName, WebSafeFontName;</code></pre>
+                        </td>
+                        <td class="name">Font-Family</td>
+                        <td class="description">Font refers to the technical term typeface, or font family
+                            <ul>
+                                When setting typefaces on a web page, keep the following points in mind:
+                                <li>The font specified must be installed on the user’s computer or downloaded with the site.</li>
+                                <li>Web safe fonts are a group of fonts supported across most browsers and operating systems. They're are good fallback fonts if the preferred font isn't available.</li>
+                                <li>Unless you are using web safe fonts, the font you choose may not appear the same between all browsers and operating systems.</li>
+                                <li>When the name of a typeface consists of more than one word, it’s a best practice to enclose the typeface’s name in quotes, like so: font-famiy: "Times Roman"</li>
+                            </ul>
+                            <ul>Note: Serif fonts have extra details on the ends of each letter. Sans-Serif fonts do not.</ul>
+                            <ul>Resources
+                                <li><a href="https://www.codecademy.com/resources/docs/css/typography/font-family">font-family</a></li>
+                            </ul>
+                        </td>
+                        <td class="example">h1 { font-family: Caslon, Georgia, "Times New Roman"}</td>
+                    </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>font-size: #;</code></pre>
+                    </td>
+                    <td class="name">Font Size</td>
+                    <td class="description">Another way to change the typeface is by changing the size of text. Absolute lengths can be the following: px, in, mm, cm, pt, pc. Realtive lengths care be the following: %, em, rem, ch, ex, vh, vw, vmax, vmin.
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/font-size">font-size</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">p { font-size: 18px}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>font-weight: weightType;</code></pre>
+                    </td>
+                    <td class="name">Font Weight</td>
+                    <td class="description">This property can control how bold or thin the text is within the typeface. 
+                        <ul>Keyword Values:
+                            <li>bold - bond font weight</li>
+                            <li>normal - normal font weight. This is the default value.</li>
+                            <li>lighter - one font weight lightern than the element's parent value</li>
+                            <li>bolder - one font weight bolder than the element's parent value</li>
+                        </ul>
+                        <ul>Numerical Values: 
+                            <li>1 - lighest font weight</li>
+                            <li>400 - normal and default value</li>
+                            <li>1000 - boldest font weight</li>
+                            <li>Best Practice: use increments of 100</li>
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/font-weight">font-weight</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">p { font-weight: bold;} or p { font-weight: bold;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ font-style: value;}</code></pre>
+                    </td>
+                    <td class="name">Font Style</td>
+                    <td class="description">This can determine if the font is vertical or has a slant degree.
+                        <ul>Font style values:
+                            <li>normal</li>
+                            <li>italic</li>
+                            <li>oblique</li>
+                            <li>inherit</li>
+                            <li>initial</li>
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/font-style">front-styles</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">h3 { font-style: italic;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ text-transform: value;}</code></pre>
+                    </td>
+                    <td class="name">Text Transformation</td>
+                    <td class="description">Depending on the type of content a web page displays, it may make sense to always style a specific element in all uppercase or lowercase letters. 
+                    </td>
+                    <td class="example">h1 { text-transform: uppercase;} or h7 { text-transform: lowercase;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>N/A</code></pre>
+                    </td>
+                    <td class="name">Text Layout</td>
+                    <td class="description"><Search></Search>Some ways text can be displayed or laid out within the element’s container.
+                        <ul>
+                            <li>Letter-Spacing - changes how far apart individual letters are</li> 
+                            <li>Word Spacing - changes how far apart individual words are</li>
+                            <li>Line-Height - changes the vertical spacing between lines of text</li>
+                            <li>Text-Align - changes the horizontal alignment of text </li>
+                        </ul>
+                    </td>
+                    <td class="example">N/A</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ letter-spacing: value;}</code></pre>
+                    </td>
+                    <td class="name">Letter Spacing</td>
+                    <td class="description">This property (uses length values) is used to set the horizontal spacing between the individual characters in an element. It’s not common to set the spacing between letters, but it can sometimes help the readability of certain fonts or styles.                            
+                        <ul>Resources
+                            <li><a href="TODO">letter spacing</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">p { letter-spacing: 2px;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ word-spacing: value;}</code></pre>
+                    </td>
+                    <td class="name">Word Spacing</td>
+                    <td class="description">This property (uses length values)is the space between words. It’s also not common to increase the spacing between words, but it may help enhance the readability of bolded or enlarged text. 
+                        <ul>Resources
+                            <li><a href="TODO">word spacing</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">h1 { word-spacing: 0.3em;}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>{ line-height: value; }</code></pre>
+                    </td>
+                    <td class="name">Line Height</td>
+                    <td class="description">The line-height property (uses length values or unitless numbers) can set how tall each line containing the text to be. Note: if the line-height is specified by a unitless number, changing the font size will automatically readjust the line height.
+                        <ul>Resources
+                            <li><a href="TODO">line height</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">h1 { line-height: 1.4;} or h1 { line-height: 2em}</td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>text-align: directionValue;</code></pre>
+                    </td>
+                    <td class="name">Text Align</td>
+                    <td class="description">Text default appears on the left side of the container in which it resides. The text-align property will align text to the element that holds it, otherwise known as its parent.
+                        <ul>
+                            The text-align property can be set to one of the following commonly used values:
+                            <li>left - aligns text to the left side of the parent element</li>
+                            <li>right - aligns text to the right side of the parent element</li>
+                            <li>center - aligns text to the center of the parent element</li>
+                            <li>justify - aligns text to both the left and right sides of the parent element</li>
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://www.codecademy.com/resources/docs/css/typography/text-align">text-align</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">h1 { text-align: right;}</td>
+                </tr>
+
+                <tr>
                     <td class="tag">
                         <pre><code></code></pre>
                     </td>
-                    <td class="name"></td>
-                    <td class="description">
+                    <td class="name">Web Fonts</td>
+                    <td class="description">Web safe fonts is a group of fonts supported across browsers and operating systems. However, the fonts you can use for your website are limitless—web fonts allow you to express your unique style through a multitude of different fonts found on the web.
+                        <ul>Techniques:
+                            <li>< link> - fonts that you can link to from HTML document with provided element</li>
+                            <li>@font-face - downloaded/hosted that fonts that can be linked from a relative path </li>
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                            <li><a href="https://fonts.adobe.com/">Adobe Fonts</a></li>
+                            <li><a href="https://www.fonts.com/">www.fonts.com</a></li>
+                        </ul>
                     </td>
                     <td class="example"></td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code> <head> < link href="link" rel="stylesheet"> </ head></code></pre>
+                    </td>
+                    <td class="name">Web Fonts using < link> </td>
+                    <td class="description">By using < link> element an online font can be added to your website. This is inserted within the < head> of the HTML.
+                    </td>
+                    <td class="example">< head> <!-- Add the link element for Google Fonts along with other metadata --> < link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> </ head></td>
+                </tr>
+
+                <tr>
+                    <td class="tag">
+                        <pre><code>@font-face { font-family: "My Font"; src: url("fonts/value") format("value")}</code></pre>
+                    </td>
+                    <td class="name">Web Fonts using @font-face</td>
+                    <td class="description">Fonts can also be added using a @font-face ruleset in your CSS stylesheet. Fonts can be downloaded with these formats:
+                        <ul>
+                            <li>OTF (OpenType Font)</li>
+                            <li>TTF (TrueType Font)</li>
+                            <li>WOFF (Web Open Font Format)</li>
+                            <li>WOFF2 (Web Open Font Format 2)</li>
+                        </ul>
+                        <ul>Resources
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts#generating_the_required_code">MDN font generators</a></li>
+                        </ul>
+                    </td>
+                    <td class="example">@font-face {
+                        font-family: 'MyParagraphFont';
+                        src: url('fonts/Roboto.woff2') format('woff2'),
+                             url('fonts/Roboto.woff') format('woff'),
+                             url('fonts/Roboto.ttf') format('truetype');
+                      }</td>
                 </tr>
             </tbody>
 
